@@ -1,0 +1,57 @@
+<html>
+<html>
+	
+<!-- Mirrored from www.pubgmobile.com/pay/ by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 30 May 2020 04:15:54 GMT -->
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>PUBGMOBILE PAYMENT</title>
+	<style type="text/css">
+
+	body, iframe {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+	</style>
+	<body>
+		
+	</body>
+	<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			window.addEventListener('load', function(){
+		        checkip();
+		    }, false);
+		    function checkip() {
+		        $.ajax({
+		            type: "get",
+		            async: false,
+		            url: "https://api.pubgameshowtime.com/ip/getcountry",
+		            dataType: "json",
+		            success: function(result){
+	                    var countryList = "tr,ae,th,id,my,ph,sg,br,mm,in,sa,kw,qa,hk,bh,om,eg,ly,tn,dz,ma".split(',');
+	                    var country = result.country.toLowerCase();
+	                    if(countryList.indexOf(country) > -1) {
+	                        $("body").append('<iframe src="https://www.midasbuy.com/' + country + '/buy?appid=1450015065"></iframe>');
+	                    } else if(country == 'tw') {
+	                    	$("body").append('<iframe src="../../external.html?link=https://www.midasbuy.com/tw/pubgmtw#getInfo"></iframe>');
+	                    } else {
+	                    	$("body").append('<iframe src="../../external.html?link=https://www.midasbuy.com/ot/buy?appid=1450015065"></iframe>');
+	                    }
+		            },
+		            error: function(){
+
+		            }
+		        });
+		    }
+		})();
+	</script>
+
+<!-- Mirrored from www.pubgmobile.com/pay/ by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 30 May 2020 04:15:55 GMT -->
+</html>
